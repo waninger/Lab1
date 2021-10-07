@@ -18,11 +18,12 @@ public class Login extends HttpServlet {
         String password = request.getParameter("password");
 
         boolean verify = LoginHandler.login(name,password);
+
         request.setAttribute("verify",verify);
         if(verify){
-            RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("SessionServlet");
             try{
-                rd.forward(request,response);
+               rd.forward(request,response);
             }catch (ServletException e) {
                 e.printStackTrace();
             }
