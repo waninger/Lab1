@@ -14,7 +14,7 @@ public class DBUser {
         }
 
         //bygg user
-        return user;
+        return null;
 
     }
 }
