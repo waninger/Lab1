@@ -15,24 +15,25 @@ public class Login extends HttpServlet {
         response.setContentType("text/html");
         String name = request.getParameter("name");
         String password = request.getParameter("password");
-        String t = ItemHandler.SearchItems();
+        System.out.println("first");
+        //String t = ItemHandler.SearchItems();
 
-        PrintWriter out = response.getWriter();
+       PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("<h1>"+ name + password + t +"</h1>");
+        out.println("<h1> HE HE HE HE HE H EH </h1>");
         out.println("</body></html>");
 
 
-/*
-        RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-        request.setAttribute("name",t);
-        request.setAttribute("password",t);
+
+        RequestDispatcher rd = request.getRequestDispatcher("SessionServlet");
+        /*request.setAttribute("name",t);
+        request.setAttribute("password",t);*/
 
         try{
             rd.forward(request,response);
         }catch (ServletException e) {
             e.printStackTrace();
         }
-*/
+
     }
 }
