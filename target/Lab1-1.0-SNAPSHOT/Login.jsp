@@ -27,6 +27,8 @@
     </table>
     <input type="submit" value="Login">
 </form>
-<h1><%= request.getAttribute("verify") %></h1>
+<h3><% if(request.getAttribute("verify")!=null){%>
+    <%= "username or password is incorrect"%>
+         <%}%></h3>
 </body>
 </html>

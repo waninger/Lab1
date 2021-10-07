@@ -12,7 +12,7 @@ import java.io.IOException;
 @WebServlet(name = "UIItemhandler", value = "/UIItimHandler")
 public class UIItemhandler extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
+    
 
     }
 }

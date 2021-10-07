@@ -1,5 +1,9 @@
 package BO;
 
+import DB.DBUser;
+
+import java.util.Collection;
+
 public class User {
     private String name;
     private String password;
@@ -10,7 +14,12 @@ public class User {
         this.password = password;
         this.id = id;
     }
-    
+
+    public static User getUser(String name, String Password){
+        return new User("janne", "1234",2);
+        //när db funkar
+        //return DBUser.getUser(name, Password);
+    }
 
     public String getName() {
         return name;
@@ -23,4 +32,5 @@ public class User {
     public int getId() {
         return id;
     }
+
 }
