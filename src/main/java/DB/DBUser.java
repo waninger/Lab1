@@ -5,6 +5,7 @@ import java.sql.*;
 
 public class DBUser {
     public static User getUser(String username, String password){
+        /*
         try{
             Connection con = DBManager.getConnection();
             Statement st = con.createStatement();
@@ -12,9 +13,9 @@ public class DBUser {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
+*/
         //bygg user
-        return user;
+        return new User(username, password, 43);
 
     }
 }

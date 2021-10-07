@@ -1,8 +1,12 @@
 package BO;
 
-public class ItemHandler {
-    public static String SearchItems(){
+import java.util.ArrayList;
 
-        return "Item";
+public class ItemHandler {
+    public static ArrayList<UIItem> SearchItems(){
+        ArrayList<UIItem> cart = new ArrayList<UIItem>();
+        cart.add(new UIItem("hatt", 1));
+
+        return cart;
     }
 }
