@@ -1,4 +1,6 @@
-<%@ page import="BO.UIItem" %><%--
+<%@ page import="BO.UIItem" %>
+<%@ page import="java.util.Iterator" %>
+<%@ page import="java.util.Collection" %><%--
   Created by IntelliJ IDEA.
   User: mikae
   Date: 2021-10-06
@@ -12,8 +14,21 @@
 </head>
 <body>
 <h1>Webshop</h1>
-<form>
+<form action="Login" method="post">
+
+    <input type="submit" value="Login">
+</form>
+<form action="UIItemHandler" method="get">
+    <% if(request.getAttribute("items")!=null){
+        Iterator it = ((Collection)request.getAttribute("items")).iterator();
+        UIItem item;
+    while(it.hasNext()){
+        item = (UIItem)it.next(); %>
+        <%= item.name%>
+        <%= item.itemID%>
+    <%}}%>
     //plocka ut information från request
+    <input type="submit" value="null">
 </form>
 </body>
 </html>

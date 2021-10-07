@@ -5,8 +5,8 @@ import DB.DBItem;
 import java.util.Collection;
 
 public class Item {
-    public static int itemID;
-    public String name;
+    private static int itemID;
+    private String name;
 
     public Item(String name, int itemID){
         this.itemID = itemID;
