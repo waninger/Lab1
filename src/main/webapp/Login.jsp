@@ -15,7 +15,7 @@
 <form action="Login" method="post">
     <table>
         <tr>
-            <td>Name</td>
+            <td>NAME</td>
             <td><input type="text" name="name"></td>
             <td><%= request.getAttribute("name") %></td>
         </tr>
