@@ -20,7 +20,6 @@ public class UIItemhandler extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
 
         try{
-            System.out.println("here");
             rd.forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();

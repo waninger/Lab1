@@ -27,8 +27,8 @@
         <%= item.name%>
         <%= item.itemID%>
     <%}}%>
-    //plocka ut information från request
     <input type="submit" value="null">
 </form>
+<h3><%= request.getSession().getAttribute("name")%></h3>
 </body>
 </html>
