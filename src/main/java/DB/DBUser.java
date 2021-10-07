@@ -3,7 +3,7 @@ import BO.User;
 
 import java.sql.*;
 
-public class DBUser {
+public class DBUser{
     public static User getUser(String username, String password){
         try{
             Connection con = DBManager.getConnection();
