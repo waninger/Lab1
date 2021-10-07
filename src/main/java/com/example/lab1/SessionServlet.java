@@ -1,5 +1,6 @@
 package com.example.lab1;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,5 +27,12 @@ public class SessionServlet extends HttpServlet {
         out.println("<h1>"+ session.getAttribute("name") + session.getAttribute("password") + "</h1>");
         out.println("</body></html>");
         System.out.println("are we here?");
+
+        RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
+        try{
+            rd.forward(request,response);
+        }catch (ServletException e) {
+            e.printStackTrace();
+        }
     }
 }

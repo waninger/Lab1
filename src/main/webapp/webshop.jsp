@@ -12,6 +12,9 @@
 </head>
 <body>
 <h1>Webshop</h1>
+<% String s = (String)request.getSession().getAttribute("user");
+        out.print("Session for: " + s);
+%>
 <form>
     //plocka ut information från request
 </form>
