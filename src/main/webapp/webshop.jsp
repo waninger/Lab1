@@ -14,6 +14,7 @@
 <h1>Webshop</h1>
 <form>
     //plocka ut information från request
+    eller inte
 </form>
 </body>
 </html>
