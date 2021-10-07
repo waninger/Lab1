@@ -1,5 +1,7 @@
 package BO;
 
+import DB.DBUser;
+
 public class LoginHandler {
     public static boolean login(String username, String password){
       //  User user = DBUser.getUser(username, password);
