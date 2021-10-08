@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Webshop</h1>
-<% String s = (String)request.getSession().getAttribute("user");
+<% String s = (String)request.getSession().getAttribute("name");
         out.print("Session for: " + s);
 %>
 <form>
