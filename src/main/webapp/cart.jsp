@@ -21,5 +21,8 @@
 <form action="Logout" method="get">
     <input type=submit value="Logout">
 </form>
+<form action="Webshop" method="get">
+    <input type=submit value="Back to shopping">
+</form>
 </body>
 </html>
