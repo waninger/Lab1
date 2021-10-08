@@ -1,4 +1,6 @@
-<%@ page import="BO.UIItem" %><%--
+<%@ page import="BO.UIItem" %>
+<%@ page import="java.util.Iterator" %>
+<%@ page import="java.util.Collection" %><%--
   Created by IntelliJ IDEA.
   User: mikae
   Date: 2021-10-06
@@ -12,11 +14,21 @@
 </head>
 <body>
 <h1>Webshop</h1>
-<% String s = (String)request.getSession().getAttribute("name");
-        out.print("Session for: " + s);
-%>
-<form>
-    //plocka ut information från request
+<form action="Login" method="post">
+
+    <input type="submit" value="Login">
 </form>
+<form action="UIItemHandler" method="get">
+    <% if(request.getAttribute("items")!=null){
+        Iterator it = ((Collection)request.getAttribute("items")).iterator();
+        UIItem item;
+    while(it.hasNext()){
+        item = (UIItem)it.next(); %>
+        <%= item.name%>
+        <%= item.itemID%>
+    <%}}%>
+    <input type="submit" value="null">
+</form>
+<h3><%= request.getSession().getAttribute("name")%></h3>
 </body>
 </html>

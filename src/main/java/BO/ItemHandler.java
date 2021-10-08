@@ -8,11 +8,15 @@ public class ItemHandler {
         ArrayList<UIItem> cart = new ArrayList<UIItem>();
         cart.add(new UIItem("hatt", 1));
 
+        /*
+        kod när databasen är igång
         Iterator it = Item.searchItem(name).iterator();
         while (it.hasNext()){
             Item i = (Item) it.next();
             cart.add(new UIItem(i.getName(),i.getItemID()));
         }
+        /
+         */
         return cart;
     }
 }
