@@ -18,7 +18,7 @@
 
     <input type="submit" value="Login">
 </form>
-<form action="UIItemHandler" method="get">
+<form action="Webshop" method="get">
     <% if(request.getAttribute("items")!=null){
         Iterator it = ((Collection)request.getAttribute("items")).iterator();
         UIItem item;
@@ -29,6 +29,10 @@
     <%}}%>
     <input type="submit" value="null">
 </form>
-<h3><%= request.getSession().getAttribute("name")%></h3>
+<form action="cart.jsp" method="post">
+    <input type=submit value="View cart">
+</form>
+<h3><%= request.getSession().getAttribute("name")%>'s session </h3>
+
 </body>
 </html>

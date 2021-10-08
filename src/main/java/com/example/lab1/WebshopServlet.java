@@ -12,8 +12,8 @@ import BO.UIItem;
 import java.io.IOException;
 import java.util.Collection;
 
-@WebServlet(name = "UIItemhandler", value = "/UIItemHandler")
-public class UIItemhandler extends HttpServlet {
+@WebServlet(name = "WebshopServlet", value = "/Webshop")
+public class WebshopServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     Collection items = UIItem.getItem("hatt");
         request.setAttribute("items",items);
