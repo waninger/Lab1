@@ -12,6 +12,14 @@
 </head>
 <body>
 <h1>Shopping cart</h1>
-<h3><%= request.getSession().getAttribute("name")%>'s session </h3>
+<h3> <% int s[] = (int[]) request.getSession().getAttribute("cart");
+    for(int i:s) {
+        out.print(" " + i);
+    }
+%>
+    <%= request.getSession().getAttribute("name")%>'s session</b></h3>
+<form action="Logout" method="get">
+    <input type=submit value="Logout">
+</form>
 </body>
 </html>
