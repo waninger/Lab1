@@ -16,10 +16,12 @@ public class SessionServlet extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         HttpSession session = request.getSession();
+        Object items = new Object[10];
 
         if(name != null && password != null) {
             session.setAttribute("name", name);
             session.setAttribute("password", password);
+            session.setAttribute("cart", items);
         }
 
      //   System.out.println(session.getAttribute("username"));

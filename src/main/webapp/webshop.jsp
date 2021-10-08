@@ -34,5 +34,11 @@
 </form>
 <h3><%= request.getSession().getAttribute("name")%>'s session </h3>
 
+    <% Object o[] = (Object[]) request.getSession().getAttribute("cart");
+    for(int i=0; i<o.length;i++) {
+        out.println
+    }%>
+        <h3> </h3>
+
 </body>
 </html>
