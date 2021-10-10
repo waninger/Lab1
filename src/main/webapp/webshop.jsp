@@ -14,8 +14,8 @@
 </head>
 <body>
 <h1>Webshop</h1>
+<h3>You are logged in as <%= request.getSession().getAttribute("name")%></h3>
 <form action="Login" method="post">
-
     <input type="submit" value="Login">
 </form>
 <form action="Webshop" method="get">
@@ -25,9 +25,17 @@
     while(it.hasNext()){
         item = (UIItem)it.next(); %>
         <%= item.name%>
+        <%= item.category%>
+        <%= item.price%>
+        <%= item.amount%>
         <%= item.itemID%>
-    <%}}%>
-    <input type="submit" value="Add to cart">
+    <%}}else{%>
+     <%
+        // request.setAttribute("search","blueHat");
+        //funkar inte request.getRequestDispatcher("/UIItemhandler").forward(request,response); %>
+    <%}%>
+    <input type="text" name="search">
+    <input type="submit" value="serach Items">
 </form>
 <form action="cart.jsp" method="post">
     <input type=submit value="View cart">
