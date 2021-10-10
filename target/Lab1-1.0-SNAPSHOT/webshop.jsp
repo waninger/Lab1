@@ -27,7 +27,7 @@
         <%= item.name%>
         <%= item.itemID%>
     <%}}%>
-    <input type="submit" value="null">
+    <input type="submit" value="Add to cart">
 </form>
 <form action="cart.jsp" method="post">
     <input type=submit value="View cart">
