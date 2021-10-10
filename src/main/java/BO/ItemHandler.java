@@ -5,14 +5,18 @@ import java.util.Iterator;
 
 public class ItemHandler {
     public static ArrayList<UIItem> SearchItems(String name){
-        ArrayList<UIItem> items = new ArrayList<UIItem>();
+        ArrayList<UIItem> cart = new ArrayList<UIItem>();
+        cart.add(new UIItem("hatt", 1));
 
+        /*
+        kod när databasen är igång
         Iterator it = Item.searchItem(name).iterator();
         while (it.hasNext()){
             Item i = (Item) it.next();
-            items.add(new UIItem(i.getName(),i.getCategory(),i.getPrice(),i.getAmount(),i.getItemID()));
+            cart.add(new UIItem(i.getName(),i.getItemID()));
         }
-
-        return items;
+        /
+         */
+        return cart;
     }
 }

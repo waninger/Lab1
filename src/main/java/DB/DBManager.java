@@ -23,9 +23,8 @@ public class DBManager {
     }
 
     private DBManager() {
-
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/web_shop", "root","1234" );
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/web_shop", "root","KTH__root!" );
             /*Statement st = con.createStatement();
             ResultSet rs = st.executeQuery("select * from t_item");
 

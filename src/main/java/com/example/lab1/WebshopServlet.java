@@ -15,8 +15,7 @@ import java.util.Collection;
 @WebServlet(name = "WebshopServlet", value = "/Webshop")
 public class WebshopServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        System.out.println("search  " + request.getParameter("search"));
-    Collection items = UIItem.getItem((String)request.getParameter("search"));
+    Collection items = UIItem.getItem("hatt");
         request.setAttribute("items",items);
         RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
 
