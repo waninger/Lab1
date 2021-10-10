@@ -16,9 +16,8 @@ public class User {
     }
 
     public static User getUser(String name, String Password){
-        return new User("janne", "1234",2);
-        //när db funkar
-        //return DBUser.getUser(name, Password);
+        //return new User("janne", "1234",2);
+        return DBUser.getUser(name, Password);
     }
 
     public String getName() {
@@ -33,4 +32,12 @@ public class User {
         return id;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }

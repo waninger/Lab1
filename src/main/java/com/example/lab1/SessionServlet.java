@@ -28,7 +28,6 @@ public class SessionServlet extends HttpServlet {
         out.println("<html><body>");
         out.println("<h1>"+ session.getAttribute("name") + session.getAttribute("password") + "</h1>");
         out.println("</body></html>");
-        System.out.println("are we here?");
 
         RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
         try{

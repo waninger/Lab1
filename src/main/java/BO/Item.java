@@ -5,11 +5,18 @@ import DB.DBItem;
 import java.util.Collection;
 
 public class Item {
-    private static int itemID;
     private String name;
+    private String category;
+    private float price;
+    private int amount;
+    private static int itemID;
 
-    public Item(String name, int itemID){
+
+    public Item(String name, String category, float price, int amount, int itemID){
         this.itemID = itemID;
+        this.category = category;
+        this.price = price;
+        this.amount = amount;
         this.name = name;
     }
     public static Collection<Item> searchItem(String name){
@@ -20,7 +27,29 @@ public class Item {
         return name;
     }
 
+    public float getPrice() {
+        return price;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
     public int getItemID() {
         return itemID;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", price=" + price +
+                ", amount=" + amount +
+                '}';
     }
 }
