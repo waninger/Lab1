@@ -21,6 +21,8 @@ public class SessionServlet extends HttpServlet {
         for(int i=0;i<10;i++) {
             items[i]= i;
             System.out.println(items[i]);
+            System.out.println(items[i]+1);
+
         }
         /////////
 
