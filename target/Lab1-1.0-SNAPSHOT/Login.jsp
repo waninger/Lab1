@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>JSP Login kfhg</title>
+    <title>JSP Login</title>
 </head>
 <body>
 <h1>Login Page</h1>
