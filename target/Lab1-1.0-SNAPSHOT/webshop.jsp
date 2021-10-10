@@ -24,18 +24,18 @@
         UIItem item;
     while(it.hasNext()){
         item = (UIItem)it.next(); %>
-        <%= item.name%>
-        <%= item.category%>
-        <%= item.price%>
-        <%= item.amount%>
-        <%= item.itemID%>
+    <h5>Item: <%= item.name%></h5>
+    <h5>Price: <%= item.price%></h5>
+    <h6>Category: <%= item.category%></h6>
+    <h6>Amount in stock: <%= item.amount%></h6>
+    <a class="btn btn-dark" href="AddtoCart?id=<%=item.itemID%>">Add to Cart</a>
     <%}}else{%>
      <%
         // request.setAttribute("search","blueHat");
         //funkar inte request.getRequestDispatcher("/UIItemhandler").forward(request,response); %>
     <%}%>
     <input type="text" name="search">
-    <input type="submit" value="serach Items">
+    <input type="submit" value="search Items">
 </form>
 <form action="cart.jsp" method="post">
     <input type=submit value="View cart">

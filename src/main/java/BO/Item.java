@@ -43,6 +43,10 @@ public class Item {
         return itemID;
     }
 
+    public Item getItem(int id) {
+        return this;
+    }
+
     @Override
     public String toString() {
         return "Item{" +

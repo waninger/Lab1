@@ -1,4 +1,8 @@
-<%--
+<%@ page import="BO.Cart" %>
+<%@ page import="java.util.Iterator" %>
+<%@ page import="java.util.Collection" %>
+<%@ page import="BO.UIItem" %>
+<%@ page import="BO.Item" %><%--
   Created by IntelliJ IDEA.
   User: sofia
   Date: 2021-10-08
@@ -12,11 +16,14 @@
 </head>
 <body>
 <h1>Shopping cart</h1>
-<h3> <% int s[] = (int[]) request.getSession().getAttribute("cart");
-    for(int i:s) {
-        out.print(" " + i);
-    }
-%></h3>
+<% Iterator it = ((Collection)request.getAttribute("cart")).iterator();
+        Item item;
+        while(it.hasNext()){
+            item = (Item) it.next(); %>
+            <h5>Item: <%= item.getName()%></h5>
+            <h5>Price: <%= item.getPrice()%></h5>
+        }
+
 </b><%= request.getSession().getAttribute("name")%>'s session</b>
 <form action="Webshop" method="get">
     <input type=submit value="Back to shopping">

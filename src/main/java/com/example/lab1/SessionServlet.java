@@ -27,7 +27,7 @@ public class SessionServlet extends HttpServlet {
         if(name != null && password != null) {
             session.setAttribute("name", name);
             session.setAttribute("password", password);
-            session.setAttribute("cart", items);
+            session.setAttribute("cart", null);
         }
 
      //   System.out.println(session.getAttribute("username"));
