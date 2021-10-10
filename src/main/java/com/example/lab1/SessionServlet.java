@@ -16,19 +16,21 @@ public class SessionServlet extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         HttpSession session = request.getSession();
+        int items[] = new int[10];
+        ////////// test
+        for(int i=0;i<10;i++) {
+            items[i]= i;
+            System.out.println(items[i]);
+        }
+        /////////
 
         if(name != null && password != null) {
             session.setAttribute("name", name);
             session.setAttribute("password", password);
+            session.setAttribute("cart", items);
         }
 
-       // response.setContentType("text/html");
-
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>"+ session.getAttribute("name") + session.getAttribute("password") + "</h1>");
-        out.println("</body></html>");
-
+     //   System.out.println(session.getAttribute("username"));
         RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
         try{
             rd.forward(request,response);

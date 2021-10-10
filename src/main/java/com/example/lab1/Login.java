@@ -13,7 +13,6 @@ import BO.LoginHandler;
 public class Login extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
         String name = request.getParameter("name");
         String password = request.getParameter("password");
 
