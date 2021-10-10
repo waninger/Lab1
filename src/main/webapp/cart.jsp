@@ -16,13 +16,15 @@
     for(int i:s) {
         out.print(" " + i);
     }
-%>
-</b><%= request.getSession().getAttribute("name")%>'s session</b></h3>
-<form action="Logout" method="get">
-    <input type=submit value="Logout">
-</form>
+%></h3>
+</b><%= request.getSession().getAttribute("name")%>'s session</b>
 <form action="Webshop" method="get">
     <input type=submit value="Back to shopping">
 </form>
+<form action="Logout" method="get">
+    <input type=submit value="Logout">
+</form>
+
+
 </body>
 </html>
