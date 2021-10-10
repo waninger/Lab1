@@ -1,5 +1,6 @@
 package com.example.lab1;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,16 +14,15 @@ import java.io.PrintWriter;
 public class LogoutServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        PrintWriter out=response.getWriter();
+       // PrintWriter out=response.getWriter();
 
-        //request.getRequestDispatcher("link.html").include(request, response);
-
+        RequestDispatcher rd = request.getRequestDispatcher("logout.jsp");
         HttpSession session=request.getSession();
         session.invalidate();
+        rd.forward(request,response);
+       /* out.print("You are successfully logged out!");
 
-        out.print("You are successfully logged out!");
-
-        out.close();
+        out.close();*/
 
     }
 }
