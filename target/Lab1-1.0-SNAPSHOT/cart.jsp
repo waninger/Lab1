@@ -17,7 +17,7 @@
         out.print(" " + i);
     }
 %>
-    <%= request.getSession().getAttribute("name")%>'s session</b></h3>
+</b><%= request.getSession().getAttribute("name")%>'s session</b></h3>
 <form action="Logout" method="get">
     <input type=submit value="Logout">
 </form>
