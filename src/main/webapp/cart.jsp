@@ -16,13 +16,13 @@
 </head>
 <body>
 <h1>Shopping cart</h1>
-<% Iterator it = ((Collection)request.getAttribute("cart")).iterator();
+<% Iterator it = ((Collection)request.getSession().getAttribute("cart")).iterator();
         UIItem item;
         while(it.hasNext()){
             item = (UIItem) it.next(); %>
             <h5>Item: <%= item.name%></h5>
             <h5>Price: <%= item.price%></h5>
-        }
+        <%}%>
 
 </b><%= request.getSession().getAttribute("name")%>'s session</b>
 <form action="Webshop" method="get">

@@ -1,6 +1,7 @@
 <%@ page import="BO.UIItem" %>
 <%@ page import="java.util.Iterator" %>
-<%@ page import="java.util.Collection" %><%--
+<%@ page import="java.util.Collection" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: mikae
   Date: 2021-10-06
@@ -41,7 +42,5 @@
 <form action="cart.jsp" method="post">
     <input type=submit value="View cart">
 </form>
-<h3><%= request.getSession().getAttribute("name")%>'s session </h3>
-
 </body>
 </html>
