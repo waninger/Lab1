@@ -13,7 +13,6 @@ public class DBItem {
         try{
             Connection con = DBManager.getConnection();
             Statement st = con.createStatement();
-
             ResultSet rs = st.executeQuery("select * from t_item where item_name like '%"+name+"%'");
             while(rs.next()){
                 items.add(new Item (rs.getString(1),rs.getString(2),rs.getFloat(3),rs.getInt(4),rs.getInt(5)));

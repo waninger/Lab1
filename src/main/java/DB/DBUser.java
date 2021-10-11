@@ -20,7 +20,6 @@ public class DBUser{
             throwables.printStackTrace();
         }
 
-        //bygg user
         return u;
 
     }
