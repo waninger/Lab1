@@ -15,7 +15,7 @@ import java.util.Iterator;
 @WebServlet(name = "AddtoCartServlet", value = "/AddtoCart")
 public class AddtoCartServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if(request.getSession().getId() == null) {
 
         }
@@ -38,9 +38,13 @@ public class AddtoCartServlet extends HttpServlet {
         request.getSession().setAttribute("sum",totalSum);
         UIItem.updateStock(id, item.amount);
 
-        RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
+        //RequestDispatcher rd = request.getRequestDispatcher("/Webshop");
         try{
-            rd.forward(request,response);
+            //rd.forward(request,response);
+            System.out.println("hej");
+            ServletContext servletContext = getServletContext();
+            RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/Webshop");
+            requestDispatcher.forward(request, response);
         }catch (ServletException e) {
             e.printStackTrace();
         }

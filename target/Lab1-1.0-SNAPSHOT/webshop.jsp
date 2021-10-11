@@ -21,7 +21,7 @@
 <%} else{%>
     log in to buy products
 <%}%>
-<% response.sendRedirect("/Webshop"); %>
+
 <form action="Webshop" method="Post">
     <% if(request.getAttribute("items")!=null){
         Iterator it = ((Collection)request.getAttribute("items")).iterator();
