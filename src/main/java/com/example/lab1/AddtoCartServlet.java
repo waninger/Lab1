@@ -16,6 +16,9 @@ import java.util.Iterator;
 public class AddtoCartServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if(request.getSession().getId() == null) {
+
+        }
         if(request.getSession().getAttribute("cart") == null) {
             ArrayList<UIItem> cart = new ArrayList<UIItem>();
             request.getSession().setAttribute("cart",cart);

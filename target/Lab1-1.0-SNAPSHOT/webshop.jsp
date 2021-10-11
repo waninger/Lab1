@@ -15,10 +15,12 @@
 </head>
 <body>
 <h1>Webshop</h1>
-<h3>You are logged in as <%= request.getSession().getAttribute("name")%></h3>
-<form action="Login" method="post">
-    <input type="submit" value="Login">
-</form>
+<%@include file="/Login.jsp"%>
+<% if(session.getAttribute("name") != null) { %>
+    <h4>You are logged in as <%= request.getSession().getAttribute("name")%></h4>
+<%} else{%>
+    log in to buy products
+<%}%>
 <form action="Webshop" method="Post">
     <% if(request.getAttribute("items")!=null){
         Iterator it = ((Collection)request.getAttribute("items")).iterator();

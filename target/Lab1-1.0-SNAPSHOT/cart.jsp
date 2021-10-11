@@ -16,7 +16,8 @@
 </head>
 <body>
 <h1>Shopping cart</h1>
-<form action="Webshop" method="post">
+<% if(session.getAttribute("name") != null) {%>
+<h4> <%= request.getSession().getAttribute("name")%>'s cart</h4>
     <% if(request.getSession().getAttribute("cart")!=null){
         Iterator it = ((Collection)request.getSession().getAttribute("cart")).iterator();
         UIItem item;
@@ -39,7 +40,11 @@
     </table>
     <%}}else{%>
     No items added to cart
+    <%}}else{%>
+    Please log in to buy products
     <%}%>
+</br>
+<form action="Webshop" method="post">
     <input type=submit value="Back to shopping">
 </form>
 

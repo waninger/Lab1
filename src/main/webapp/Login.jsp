@@ -8,10 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>JSP Login kfhg</title>
+    <title>JSP Login</title>
 </head>
 <body>
-<h1>Login Page</h1>
+<h3>Login</h3>
+<% if(request.getAttribute("verify")==null || (boolean) request.getAttribute("verify") == false){%>
 <form action="Login" method="post">
     <table>
         <tr>
@@ -24,9 +25,10 @@
         </tr>
     </table>
     <input type="submit" value="Login">
-</form>
-<h3><% if(request.getAttribute("verify")!=null){%>
-    <%= "username or password is incorrect"%>
-         <%}%></h3>
+</form>  <%}%>
+<h3><% if(request.getAttribute("verify")!=null){
+        if((boolean) request.getAttribute("verify") == false) {%>
+            <%= "username or password is incorrect"%>
+    <%}}%></h3>
 </body>
 </html>
