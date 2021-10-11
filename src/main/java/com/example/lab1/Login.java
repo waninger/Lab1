@@ -28,7 +28,7 @@ public class Login extends HttpServlet {
             }
         }else {
             try {
-                RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
                 rd.forward(request, response);
             } catch (ServletException e) {
                 e.printStackTrace();

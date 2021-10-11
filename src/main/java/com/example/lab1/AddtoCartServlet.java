@@ -21,14 +21,19 @@ public class AddtoCartServlet extends HttpServlet {
         }
         if(request.getSession().getAttribute("cart") == null) {
             ArrayList<UIItem> cart = new ArrayList<UIItem>();
+            int sum =0;
             request.getSession().setAttribute("cart",cart);
+            request.getSession().setAttribute("sum", sum);
         }
 
         ArrayList<UIItem> tempCart = (ArrayList<UIItem>) request.getSession().getAttribute("cart");
+        int totalSum = (int) request.getSession().getAttribute("sum");
         int id = Integer.parseInt(request.getParameter("id"));
+
 
         UIItem item = UIItem.getItem(id);
         tempCart.add(item);
+        totalSum += item.price;
 
         RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
         try{

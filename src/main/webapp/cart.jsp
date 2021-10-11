@@ -38,6 +38,7 @@
             <td style="border: 1px solid black"><%= item.itemID%></td>
         </tr>
     </table>
+    Total amount:
     <%}}else{%>
     No items added to cart
     <%}}else{%>

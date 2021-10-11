@@ -15,7 +15,6 @@ import java.util.Collection;
 @WebServlet(name = "WebshopServlet", value = "/Webshop")
 public class WebshopServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        System.out.println("search  " + request.getParameter("search"));
         Collection items;
         if(request.getParameter("search")== null){
             System.out.println(false);

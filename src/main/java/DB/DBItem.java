@@ -41,6 +41,18 @@ public class DBItem {
         }
         return item;
     }
+
+    public static void adjustAmount(int id, int amount) {
+        try{
+            Connection con = DBManager.getConnection();
+            Statement st = con.createStatement();
+
+            ResultSet rs = st.executeQuery("update t_item set amount = '"+amount-1+"'where id ='  " + id +"'");
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }
 
 

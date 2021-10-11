@@ -5,8 +5,9 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<% response.sendRedirect("webshop.jsp"); %>
-<a href="Login">Hello Servlet</a>
+<%
+    response.sendRedirect("webshop.jsp");
+%>
 
 </body>
 </html>
