@@ -17,10 +17,8 @@ public class WebshopServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Collection items;
         if(request.getParameter("search")== null){
-            System.out.println(false);
             items = UIItem.getItem("");
-        }else
-        items = UIItem.getItem((String)request.getParameter("search"));
+        }else items = UIItem.getItem((String)request.getParameter("search"));
 
         request.setAttribute("items",items);
         RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
