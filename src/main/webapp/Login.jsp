@@ -11,8 +11,8 @@
     <title>JSP Login</title>
 </head>
 <body>
-<h3>Login</h3>
 <% if(request.getAttribute("verify")==null || (boolean) request.getAttribute("verify") == false){%>
+<h3>Login</h3>
 <form action="Login" method="post">
     <table>
         <tr>

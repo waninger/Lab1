@@ -21,4 +21,8 @@ public class ItemHandler {
         Item i = Item.searchItem(id);
         return new UIItem(i.getName(),i.getCategory(),i.getPrice(),i.getAmount(),i.getItemID());
     }
+
+    public static void updateStock(int id, int amount) {
+        Item.updateAmount(id, amount);
+    }
 }

@@ -27,6 +27,10 @@ public class UIItem {
         return ItemHandler.SearchItems(id);
     }
 
+    public static void updateStock(int id, int amount) {
+        ItemHandler.updateStock(id, amount);
+    }
+
     @Override
     public String toString() {
         return "UIItem{" +

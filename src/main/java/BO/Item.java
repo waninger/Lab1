@@ -26,6 +26,10 @@ public class Item {
         return DBItem.getItems(id);
     }
 
+    public static void updateAmount(int id, int amount) {
+        DBItem.updateAmount(id, amount);
+    }
+
     public String getName() {
         return name;
     }

@@ -42,13 +42,13 @@ public class DBItem {
         return item;
     }
 
-    public static void adjustAmount(int id, int amount) {
+    public static void updateAmount(int id, int amount) {
         try{
             Connection con = DBManager.getConnection();
             Statement st = con.createStatement();
-            int newAmount = 
-            String query = "update t_item set amount";
-            //ResultSet rs = st.executeQuery("update t_item set amount = '"+amount-1+"'where id ='  " + id +"'");
+            int newAmount = amount-1;
+            String update = "update t_item set amount = '" + newAmount + "' where id = '" + id + "'";
+            st.executeUpdate(update);
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();

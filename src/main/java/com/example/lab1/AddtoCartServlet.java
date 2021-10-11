@@ -27,13 +27,16 @@ public class AddtoCartServlet extends HttpServlet {
         }
 
         ArrayList<UIItem> tempCart = (ArrayList<UIItem>) request.getSession().getAttribute("cart");
-        int totalSum = (int) request.getSession().getAttribute("sum");
         int id = Integer.parseInt(request.getParameter("id"));
 
 
         UIItem item = UIItem.getItem(id);
         tempCart.add(item);
+
+        int totalSum = (int) request.getSession().getAttribute("sum");
         totalSum += item.price;
+        request.getSession().setAttribute("sum",totalSum);
+        UIItem.updateStock(id, item.amount);
 
         RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
         try{

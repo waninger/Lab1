@@ -38,12 +38,12 @@
             <td style="border: 1px solid black"><%= item.itemID%></td>
         </tr>
     </table>
-    Total cost:
     <%}}else{%>
     No items added to cart
     <%}}else{%>
     Please log in to buy products
     <%}%>
+<h4>Total cost: <% out.println(request.getSession().getAttribute("sum"));%></h4>
 </br>
 </br>
 <form action="Webshop" method="post">
