@@ -26,7 +26,7 @@
     while(it.hasNext()){
         item = (UIItem)it.next(); %>
     <table style="width: 50%; border: 1px solid black">
-        <tr style="border: 1px solid black">
+        <tr>
             <td style="border: 1px solid black">Name  </td>
             <td style="border: 1px solid black">Category  </td>
             <td style="border: 1px solid black">Price  </td>

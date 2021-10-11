@@ -16,7 +16,7 @@
 </head>
 <body>
 <h1>Shopping cart</h1>
-<form action="Webshop" method="get"> //ändrat till post----
+<form action="Webshop" method="post">
     <% if(request.getSession().getAttribute("cart")!=null){
         Iterator it = ((Collection)request.getSession().getAttribute("cart")).iterator();
         UIItem item;
