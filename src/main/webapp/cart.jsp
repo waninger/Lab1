@@ -41,7 +41,7 @@
     <%}}else{%>
     Please log in to buy products
     <%}%>
-<h4>Total cost: <% out.println(request.getSession().getAttribute("sum"));%></h4>
+<h4>Total cost: <% out.println(request.getSession().getAttribute("sum"));%> SEK</h4>
 </br>
 </br>
 <form action="Webshop" method="post">

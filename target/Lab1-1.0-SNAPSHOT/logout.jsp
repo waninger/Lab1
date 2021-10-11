@@ -10,7 +10,7 @@
 <head>
     <title>Logout</title>
 </head>
-<h3>You are successfully logged OUT!"</b>
-    <a href="Login.jsp">Go Back To Home Page</a></h3>
+<h3>You are successfully logged OUT!"</h3></b>
+    <a href="Login.jsp">Go Back To Home Page</a>
 </body>
 </html>
