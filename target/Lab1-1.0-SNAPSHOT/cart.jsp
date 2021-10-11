@@ -16,22 +16,36 @@
 </head>
 <body>
 <h1>Shopping cart</h1>
-<% Iterator it = ((Collection)request.getAttribute("cart")).iterator();
-        Item item;
+<form action="Webshop" method="get"> //ändrat till post----
+    <% if(request.getAttribute("cart")!=null){
+        Iterator it = ((Collection)request.getAttribute("cart")).iterator();
+        UIItem item;
         while(it.hasNext()){
-            item = (Item) it.next(); %>
-            <h5>Item: <%= item.getName()%></h5>
-            <h5>Price: <%= item.getPrice()%></h5>
-        }
-
-</b><%= request.getSession().getAttribute("name")%>'s session</b>
-<form action="Webshop" method="get">
+            item = (UIItem)it.next(); %>
+    <table style="width: 50%; border: 1px solid black">
+        <tr>
+            <td style="border: 1px solid black">Name  </td>
+            <td style="border: 1px solid black">Category  </td>
+            <td style="border: 1px solid black">Price  </td>
+            <td style="border: 1px solid black">Amount in stock  </td>
+            <td style="border: 1px solid black">Item ID  </td>
+        </tr>
+        <tr style="border: 1px solid black">
+            <td style="border: 1px solid black"><%= item.name%></td>
+            <td style="border: 1px solid black"><%= item.category%></td>
+            <td style="border: 1px solid black"><%= item.price%></td>
+            <td style="border: 1px solid black"><%= item.amount%></td>
+            <td style="border: 1px solid black"><%= item.itemID%></td>
+        </tr>
+    </table>
+    <%}}else{%>
+    No items added to cart
+    <%}%>
     <input type=submit value="Back to shopping">
 </form>
+
 <form action="Logout" method="get">
     <input type=submit value="Logout">
 </form>
-
-
 </body>
 </html>
