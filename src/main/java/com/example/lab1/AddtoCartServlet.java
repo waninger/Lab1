@@ -17,27 +17,20 @@ public class AddtoCartServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if(request.getSession().getAttribute("cart") == null) {
-            ArrayList<UIItem> cart = new ArrayList<UIItem>();
+            ArrayList<Item> cart = new ArrayList<Item>();
             request.getSession().setAttribute("cart",cart);
         }
 
-        ArrayList<UIItem> tempCart = (ArrayList<UIItem>) request.getSession().getAttribute("cart");
+        ArrayList<Item> tempCart = (ArrayList<Item>) request.getSession().getAttribute("cart");
         int id = Integer.parseInt(request.getParameter("id"));
 
-        System.out.println("HOHO");
-        Collection store = (Collection) request.getSession().getAttribute("items");
-        Iterator it = ((Collection)request.getAttribute("items")).iterator();
-        UIItem item;
-        while(it.hasNext()){
-            item = (UIItem) it.next();
-            if(item.itemID == id) {
-                tempCart.add(item);
-                break;
-            }
-        }
-
-
-        System.out.println(request.getParameter("id"));
+        Item item = UIItem.getItem(id);
+        tempCart.add(item);
+        System.out.println(item.getName());
+        /*
+        for(Item i:tempCart) {
+            System.out.println(i.getName());
+        }*/
 
         RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
         try{

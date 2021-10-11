@@ -16,13 +16,6 @@ public class SessionServlet extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         HttpSession session = request.getSession();
-        int items[] = new int[10];
-        ////////// test
-        for(int i=0;i<10;i++) {
-            items[i]= i;
-            System.out.println(items[i]);
-        }
-        /////////
 
         if(name != null && password != null) {
             session.setAttribute("name", name);

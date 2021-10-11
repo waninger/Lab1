@@ -17,11 +17,11 @@
 <body>
 <h1>Shopping cart</h1>
 <% Iterator it = ((Collection)request.getAttribute("cart")).iterator();
-        Item item;
+        UIItem item;
         while(it.hasNext()){
-            item = (Item) it.next(); %>
-            <h5>Item: <%= item.getName()%></h5>
-            <h5>Price: <%= item.getPrice()%></h5>
+            item = (UIItem) it.next(); %>
+            <h5>Item: <%= item.name%></h5>
+            <h5>Price: <%= item.price%></h5>
         }
 
 </b><%= request.getSession().getAttribute("name")%>'s session</b>

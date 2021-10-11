@@ -28,6 +28,7 @@
     <h5>Price: <%= item.price%></h5>
     <h6>Category: <%= item.category%></h6>
     <h6>Amount in stock: <%= item.amount%></h6>
+    <h6>Id: <%= item.itemID%></h6>
     <a class="btn btn-dark" href="AddtoCart?id=<%=item.itemID%>">Add to Cart</a>
     <%}}else{%>
      <%

@@ -9,7 +9,7 @@ public class Item {
     private String category;
     private float price;
     private int amount;
-    private static int itemID;
+    private int itemID;
 
 
     public Item(String name, String category, float price, int amount, int itemID){
@@ -21,6 +21,10 @@ public class Item {
     }
     public static Collection<Item> searchItem(String name){
         return DBItem.getItems(name);
+    }
+
+    public static Item searchItem(int id) {
+        return DBItem.getItems(id);
     }
 
     public String getName() {
