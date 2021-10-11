@@ -52,7 +52,5 @@
 <form action="cart.jsp" method="post">
     <input type=submit value="View cart">
 </form>
-<h3><%= request.getSession().getAttribute("name")%>'s session  </h3>
-
 </body>
 </html>
