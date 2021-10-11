@@ -18,7 +18,7 @@
 <h1>Shopping cart</h1>
 <form action="Webshop" method="get"> //ändrat till post----
     <% if(request.getAttribute("cart")!=null){
-        Iterator it = ((Collection)request.getAttribute("cart")).iterator();
+        Iterator it = ((Collection)request.getSession().getAttribute("cart")).iterator();
         UIItem item;
         while(it.hasNext()){
             item = (UIItem)it.next(); %>
