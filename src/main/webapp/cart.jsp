@@ -38,12 +38,13 @@
             <td style="border: 1px solid black"><%= item.itemID%></td>
         </tr>
     </table>
-    Total amount:
+    Total cost:
     <%}}else{%>
     No items added to cart
     <%}}else{%>
     Please log in to buy products
     <%}%>
+</br>
 </br>
 <form action="Webshop" method="post">
     <input type=submit value="Back to shopping">

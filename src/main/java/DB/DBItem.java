@@ -46,8 +46,9 @@ public class DBItem {
         try{
             Connection con = DBManager.getConnection();
             Statement st = con.createStatement();
-
-            ResultSet rs = st.executeQuery("update t_item set amount = '"+amount-1+"'where id ='  " + id +"'");
+            int newAmount = 
+            String query = "update t_item set amount";
+            //ResultSet rs = st.executeQuery("update t_item set amount = '"+amount-1+"'where id ='  " + id +"'");
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
