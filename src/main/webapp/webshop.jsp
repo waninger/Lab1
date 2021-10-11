@@ -32,6 +32,7 @@
             <td style="border: 1px solid black">Price  </td>
             <td style="border: 1px solid black">Amount in stock  </td>
             <td style="border: 1px solid black">Item ID  </td>
+            <td style="border: 1px solid black">Action  </td>
         </tr>
         <tr style="border: 1px solid black">
             <td style="border: 1px solid black"><%= item.name%></td>
@@ -39,6 +40,8 @@
             <td style="border: 1px solid black"><%= item.price%></td>
             <td style="border: 1px solid black"><%= item.amount%></td>
             <td style="border: 1px solid black"><%= item.itemID%></td>
+            <td style="border: 1px solid black"><a class="btn btn-dark" href="AddtoCart?id=<%=item.itemID%>">Add to Cart</a></td>
+
         </tr>
     </table>
     <%}}else{%>
