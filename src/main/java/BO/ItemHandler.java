@@ -1,6 +1,7 @@
 package BO;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 
 public class ItemHandler {
@@ -14,5 +15,10 @@ public class ItemHandler {
         }
 
         return items;
+    }
+
+    public static UIItem SearchItems(int id) {
+        Item i = Item.searchItem(id);
+        return new UIItem(i.getName(),i.getCategory(),i.getPrice(),i.getAmount(),i.getItemID());
     }
 }

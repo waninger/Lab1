@@ -1,6 +1,7 @@
 <%@ page import="BO.UIItem" %>
 <%@ page import="java.util.Iterator" %>
-<%@ page import="java.util.Collection" %><%--
+<%@ page import="java.util.Collection" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: mikae
   Date: 2021-10-06
@@ -43,7 +44,7 @@
     <%}}else{%>
      <%}%>
     <input type="text" name="search">
-    <input type="submit" value="serach Items">
+    <input type="submit" value="search Items">
 </form>
 <form action="cart.jsp" method="post">
     <input type=submit value="View cart">
