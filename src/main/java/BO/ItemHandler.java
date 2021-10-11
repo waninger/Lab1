@@ -17,7 +17,8 @@ public class ItemHandler {
         return items;
     }
 
-    public static Item SearchItems(int id) {
-       return Item.searchItem(id);
+    public static UIItem SearchItems(int id) {
+        Item i = Item.searchItem(id);
+        return new UIItem(i.getName(),i.getCategory(),i.getPrice(),i.getAmount(),i.getItemID());
     }
 }

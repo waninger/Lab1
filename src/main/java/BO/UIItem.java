@@ -23,7 +23,18 @@ public class UIItem {
         return ItemHandler.SearchItems(name);
     }
     //gör sök på id
-    public static Item getItem(int id) {
+    public static UIItem getItem(int id) {
         return ItemHandler.SearchItems(id);
+    }
+
+    @Override
+    public String toString() {
+        return "UIItem{" +
+                "name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", price=" + price +
+                ", amount=" + amount +
+                ", itemID=" + itemID +
+                '}';
     }
 }
