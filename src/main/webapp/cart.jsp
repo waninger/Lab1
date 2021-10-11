@@ -27,14 +27,12 @@
             <td style="border: 1px solid black">Name  </td>
             <td style="border: 1px solid black">Category  </td>
             <td style="border: 1px solid black">Price  </td>
-            <td style="border: 1px solid black">Amount in stock  </td>
             <td style="border: 1px solid black">Item ID  </td>
         </tr>
         <tr style="border: 1px solid black">
             <td style="border: 1px solid black"><%= item.name%></td>
             <td style="border: 1px solid black"><%= item.category%></td>
             <td style="border: 1px solid black"><%= item.price%></td>
-            <td style="border: 1px solid black"><%= item.amount%></td>
             <td style="border: 1px solid black"><%= item.itemID%></td>
         </tr>
     </table>
