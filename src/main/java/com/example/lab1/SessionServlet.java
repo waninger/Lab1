@@ -29,13 +29,11 @@ public class SessionServlet extends HttpServlet {
             session.setAttribute("password", password);
             session.setAttribute("cart", items);
         }
-
-     //   System.out.println(session.getAttribute("username"));
-        RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
         try{
-            rd.forward(request,response);
+            getServletContext().getRequestDispatcher("/Webshop").forward(request,response);
         }catch (ServletException e) {
             e.printStackTrace();
         }
+
     }
 }

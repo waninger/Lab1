@@ -18,29 +18,37 @@
 <form action="Login" method="post">
     <input type="submit" value="Login">
 </form>
-<form action="Webshop" method="get">
+<form action="Webshop" method="Post">
     <% if(request.getAttribute("items")!=null){
         Iterator it = ((Collection)request.getAttribute("items")).iterator();
         UIItem item;
     while(it.hasNext()){
         item = (UIItem)it.next(); %>
-        <%= item.name%>
-        <%= item.category%>
-        <%= item.price%>
-        <%= item.amount%>
-        <%= item.itemID%>
+    <table style="width: 50%; border: 1px solid black">
+        <tr>
+            <td style="border: 1px solid black">Name  </td>
+            <td style="border: 1px solid black">Category  </td>
+            <td style="border: 1px solid black">Price  </td>
+            <td style="border: 1px solid black">Amount in stock  </td>
+            <td style="border: 1px solid black">Item ID  </td>
+        </tr>
+        <tr style="border: 1px solid black">
+            <td style="border: 1px solid black"><%= item.name%></td>
+            <td style="border: 1px solid black"><%= item.category%></td>
+            <td style="border: 1px solid black"><%= item.price%></td>
+            <td style="border: 1px solid black"><%= item.amount%></td>
+            <td style="border: 1px solid black"><%= item.itemID%></td>
+        </tr>
+    </table>
     <%}}else{%>
-     <%
-        // request.setAttribute("search","blueHat");
-        //funkar inte request.getRequestDispatcher("/UIItemhandler").forward(request,response); %>
-    <%}%>
+     <%}%>
     <input type="text" name="search">
     <input type="submit" value="serach Items">
 </form>
 <form action="cart.jsp" method="post">
     <input type=submit value="View cart">
 </form>
-<h3><%= request.getSession().getAttribute("name")%>'s session </h3>
+<h3><%= request.getSession().getAttribute("name")%>'s session  </h3>
 
 </body>
 </html>

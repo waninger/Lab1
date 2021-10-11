@@ -11,7 +11,6 @@ public class Item {
     private int amount;
     private static int itemID;
 
-
     public Item(String name, String category, float price, int amount, int itemID){
         this.itemID = itemID;
         this.category = category;

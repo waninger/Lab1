@@ -14,9 +14,15 @@ import java.util.Collection;
 
 @WebServlet(name = "WebshopServlet", value = "/Webshop")
 public class WebshopServlet extends HttpServlet {
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         System.out.println("search  " + request.getParameter("search"));
-    Collection items = UIItem.getItem((String)request.getParameter("search"));
+        Collection items;
+        if(request.getParameter("search")== null){
+            System.out.println(false);
+            items = UIItem.getItem("");
+        }else
+        items = UIItem.getItem((String)request.getParameter("search"));
+
         request.setAttribute("items",items);
         RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
 
