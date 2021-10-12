@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import BO.LoginHandler;
 
 @WebServlet(name = "LoginServlet", value = "/Login")
-public class Login extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String name = request.getParameter("name");
