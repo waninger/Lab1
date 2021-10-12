@@ -25,7 +25,6 @@ public class AddtoCartServlet extends HttpServlet {
         ArrayList<UIItem> tempCart = (ArrayList<UIItem>) request.getSession().getAttribute("cart");
         int id = Integer.parseInt(request.getParameter("id"));
 
-
         UIItem item = UIItem.getItem(id);
         tempCart.add(item);
 

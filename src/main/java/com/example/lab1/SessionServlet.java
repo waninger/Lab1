@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "SessionServlet", value = "/SessionServlet")
 public class SessionServlet extends HttpServlet {
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         HttpSession session = request.getSession();
