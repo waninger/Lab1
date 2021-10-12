@@ -14,7 +14,6 @@ public class User {
     }
 
     public static User getUser(String name, String Password){
-        //return new User("janne", "1234",2);
         return DBUser.getUser(name, Password);
     }
 

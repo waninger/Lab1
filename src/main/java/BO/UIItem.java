@@ -20,7 +20,7 @@ public class UIItem {
     public static Collection<UIItem> getItem(String name){
         return ItemHandler.SearchItems(name);
     }
-    //gör sök på id
+
     public static UIItem getItem(int id) {
         return ItemHandler.SearchItems(id);
     }

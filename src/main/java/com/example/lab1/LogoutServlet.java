@@ -14,15 +14,10 @@ import java.io.PrintWriter;
 public class LogoutServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-       // PrintWriter out=response.getWriter();
 
         RequestDispatcher rd = request.getRequestDispatcher("logout.jsp");
         HttpSession session=request.getSession();
         session.invalidate();
         rd.forward(request,response);
-       /* out.print("You are successfully logged out!");
-
-        out.close();*/
-
     }
 }
