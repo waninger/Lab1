@@ -42,15 +42,17 @@ public class DBItem {
     }
 
     public static void updateAmount(int id, int amount) {
-        try{
-            Connection con = DBManager.getConnection();
-            Statement st = con.createStatement();
-            int newAmount = amount-1;
-            String update = "update t_item set amount = '" + newAmount + "' where id = '" + id + "'";
-            st.executeUpdate(update);
+        if(amount>0) {
+            try{
+                Connection con = DBManager.getConnection();
+                Statement st = con.createStatement();
+                int newAmount = amount-1;
+                String update = "update t_item set amount = '" + newAmount + "' where id = '" + id + "'";
+                st.executeUpdate(update);
 
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
         }
     }
 }
