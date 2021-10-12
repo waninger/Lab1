@@ -16,8 +16,8 @@ public class Login extends HttpServlet {
         String password = request.getParameter("password");
 
         boolean verify = LoginHandler.login(name,password);
-
         request.setAttribute("verify",verify);
+
         if(verify){
             RequestDispatcher rd = request.getRequestDispatcher("SessionServlet");
             try{

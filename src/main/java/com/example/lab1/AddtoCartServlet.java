@@ -12,13 +12,8 @@ import java.util.ArrayList;
 public class AddtoCartServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(request.getSession().getAttribute("name") == null) {
-            RequestDispatcher rd = request.getRequestDispatcher("webshop.jsp");
-            try{
-                rd.forward(request,response);
-            }catch (ServletException e) {
-                e.printStackTrace();
-            }
+        if(request.getSession().getId() == null) {
+
         }
 
         int id = Integer.parseInt(request.getParameter("id"));

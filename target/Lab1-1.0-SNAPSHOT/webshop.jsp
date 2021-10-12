@@ -17,10 +17,11 @@
 </head>
 <body>
 <h1>Webshop</h1>
-<%@include file="/Login.jsp"%>
+
 <% if(session.getAttribute("name") != null) { %>
     <h4>You are logged in as <%= request.getSession().getAttribute("name")%></h4>
 <%} else{%>
+<%@include file="/Login.jsp"%>
     log in to buy products
 <%}%>
 <form action="Webshop" method="Post">

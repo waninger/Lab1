@@ -12,7 +12,6 @@ public class ItemHandler {
             Item i = (Item) it.next();
             items.add(new UIItem(i.getName(),i.getCategory(),i.getPrice(),i.getAmount(),i.getItemID()));
         }
-
         return items;
     }
 

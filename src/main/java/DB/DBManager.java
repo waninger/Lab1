@@ -7,11 +7,9 @@ public class DBManager {
     private static DBManager instance = null;
     private Connection con = null;
 
-    /////////////////////////
     public static void main(String[] args) {
         DBManager.getConnection();
     }
-    ////////////////////////
 
     private static DBManager getInstance() {
         if(instance == null) {
@@ -24,12 +22,6 @@ public class DBManager {
 
         try {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/web_shop", "root","1234" );
-            /*Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("select * from t_item");
-
-            while(rs.next()) {
-                System.out.println(rs.getString("item_name"));
-            }*/
         } catch (Exception e) {
             e.printStackTrace();
         }

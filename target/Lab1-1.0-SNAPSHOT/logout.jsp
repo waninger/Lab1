@@ -11,6 +11,6 @@
     <title>Logout</title>
 </head>
 <h3>You are successfully logged OUT!"</h3></b>
-    <a href="Login.jsp">Go Back To Home Page</a>
+    <a href="webshop.jsp">Go Back To Home Page</a>
 </body>
 </html>
